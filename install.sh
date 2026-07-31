@@ -26,4 +26,3 @@ fi
 ln -s "$SOURCE_DIR" "$TARGET_DIR"
 echo "Installed CodexPM at $TARGET_DIR"
 echo "Start a new Codex task before using the skill."
-

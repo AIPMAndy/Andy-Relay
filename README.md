@@ -81,4 +81,3 @@ It supports capability-based routing to Gemini, Grok, Doubao, ChatGPT, Google Se
 ## License
 
 [MIT](LICENSE) · Created by Andy ([@AIPMAndy](https://github.com/AIPMAndy))
-

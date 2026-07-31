@@ -101,4 +101,3 @@ Finish only when the requested deliverable exists and acceptance checks pass. Su
 - unresolved gaps or risks
 
 Do not expose internal browser mechanics, raw worker conversations, or unnecessary process detail unless the user asks.
-

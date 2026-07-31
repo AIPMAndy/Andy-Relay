@@ -47,4 +47,3 @@ Assign the proposal to one provider and an explicit challenge or verification ta
 ### Repository implementation
 
 Keep local Codex as executor because it can inspect files and run tests. Delegate only a sanitized design question, independent review, or documentation lookup that does not require direct repository access.
-

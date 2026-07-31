@@ -59,4 +59,3 @@ Ask the worker to continue from the exact last complete heading or request the m
 ### Provider refuses or lacks a feature
 
 Record the limitation, choose the next provider from the routing matrix, or complete the task locally. Do not weaken safety constraints to obtain an answer.
-
