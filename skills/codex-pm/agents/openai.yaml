@@ -1,0 +1,4 @@
+interface:
+  display_name: "CodexPM"
+  short_description: "让 Codex 调度多个网页版 AI 并核验最终结果"
+  default_prompt: "Use $codex-pm to delegate this task to the best available web AI and verify the result."
