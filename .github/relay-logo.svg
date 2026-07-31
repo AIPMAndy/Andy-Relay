@@ -1,0 +1,27 @@
+<svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="120" height="120" rx="24" fill="url(#gradient)"/>
+  <defs>
+    <linearGradient id="gradient" x1="0" y1="0" x2="120" y2="120" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#7C3AED"/>
+      <stop offset="100%" stop-color="#0EA5E9"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Central PM node -->
+  <circle cx="60" cy="60" r="12" fill="white" opacity="0.95"/>
+
+  <!-- Worker nodes -->
+  <circle cx="30" cy="30" r="8" fill="white" opacity="0.7"/>
+  <circle cx="90" cy="30" r="8" fill="white" opacity="0.7"/>
+  <circle cx="30" cy="90" r="8" fill="white" opacity="0.7"/>
+  <circle cx="90" cy="90" r="8" fill="white" opacity="0.7"/>
+
+  <!-- Connection lines -->
+  <line x1="60" y1="60" x2="30" y2="30" stroke="white" stroke-width="2" opacity="0.6"/>
+  <line x1="60" y1="60" x2="90" y2="30" stroke="white" stroke-width="2" opacity="0.6"/>
+  <line x1="60" y1="60" x2="30" y2="90" stroke="white" stroke-width="2" opacity="0.6"/>
+  <line x1="60" y1="60" x2="90" y2="90" stroke="white" stroke-width="2" opacity="0.6"/>
+
+  <!-- Relay symbol -->
+  <path d="M 60 54 L 66 60 L 60 66" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+</svg>
