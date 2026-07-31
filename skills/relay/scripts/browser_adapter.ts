@@ -71,47 +71,61 @@ export function createBrowserAdapter(): BrowserAdapter {
 class WebBridgeAdapter implements BrowserAdapter {
   readonly environment: Environment = 'claude-code';
   private session: string = 'default';
+  private timer: OperationTimer = new OperationTimer();
 
   async navigate(url: string): Promise<void> {
-    // In actual Claude Code context, this would invoke mcp__webbridge__navigate
+    await this.timer.enforceDelay('navigate', 1500);
     console.log(`[WebBridge] Navigate to ${url}`);
     // Tool invocation would happen here via Claude Code's tool system
     throw new Error('WebBridge tools must be invoked through Claude Code tool system');
   }
 
   async getPageContent(): Promise<string> {
-    // Use snapshot + evaluate to get content
+    await this.timer.enforceDelay('getPageContent', 1000);
     console.log('[WebBridge] Getting page content');
     throw new Error('WebBridge tools must be invoked through Claude Code tool system');
   }
 
   async waitForElement(selector: string, timeout: number = 5000): Promise<void> {
+    await this.timer.enforceDelay('waitForElement', 500);
     console.log(`[WebBridge] Waiting for ${selector}`);
-    // Use evaluate with polling
     throw new Error('WebBridge tools must be invoked through Claude Code tool system');
   }
 
   async click(selector: string): Promise<void> {
+    await this.timer.enforceDelay('click', 800);
     console.log(`[WebBridge] Click ${selector}`);
+    // After click, add verification delay
+    await humanDelay(500, 1000);
     throw new Error('WebBridge tools must be invoked through Claude Code tool system');
   }
 
   async fill(selector: string, value: string): Promise<void> {
+    await this.timer.enforceDelay('fill', 500);
     console.log(`[WebBridge] Fill ${selector} with "${value}"`);
+
+    // For long text, warn about chunking
+    if (value.length > 100) {
+      console.warn('⚠️ Consider using typeAsHuman() for text longer than 100 chars');
+    }
+
     throw new Error('WebBridge tools must be invoked through Claude Code tool system');
   }
 
   async evaluate(code: string): Promise<any> {
+    await this.timer.enforceDelay('evaluate', 500);
     console.log(`[WebBridge] Evaluate: ${code.substring(0, 50)}...`);
     throw new Error('WebBridge tools must be invoked through Claude Code tool system');
   }
 
   async screenshot(): Promise<string> {
+    await this.timer.enforceDelay('screenshot', 1000);
     console.log('[WebBridge] Taking screenshot');
     throw new Error('WebBridge tools must be invoked through Claude Code tool system');
   }
 
   async extractText(selector?: string): Promise<string> {
+    await this.timer.enforceDelay('extractText', 800);
     console.log(`[WebBridge] Extract text from ${selector || 'body'}`);
     throw new Error('WebBridge tools must be invoked through Claude Code tool system');
   }
@@ -166,9 +180,56 @@ class CodexBrowserAdapter implements BrowserAdapter {
 }
 
 /**
- * Helper: Generate human-paced delay
+ * Helper: Generate human-paced delay with jitter
+ *
+ * ⚠️ CRITICAL: This is a SECURITY requirement, not a performance optimization.
+ * Mechanical timing patterns WILL trigger platform detection and account bans.
+ *
+ * @param min Minimum delay in milliseconds (must be >= 500)
+ * @param max Maximum delay in milliseconds
+ * @returns Promise that resolves after a randomized human-like delay
  */
 export function humanDelay(min: number = 500, max: number = 1500): Promise<void> {
-  const delay = Math.floor(Math.random() * (max - min + 1)) + min;
-  return new Promise(resolve => setTimeout(resolve, delay));
+  if (min < 500) {
+    console.warn(`⚠️ SAFETY WARNING: humanDelay minimum ${min}ms is below safe threshold (500ms)`);
+  }
+
+  // Add micro-jitter to avoid fixed patterns (±100ms)
+  const jitter = Math.random() * 200 - 100;
+  const delay = Math.floor(Math.random() * (max - min + 1)) + min + jitter;
+  const clampedDelay = Math.max(min, Math.min(max + 200, delay));
+
+  return new Promise(resolve => setTimeout(resolve, clampedDelay));
+}
+
+/**
+ * Operation timer to enforce minimum delays between actions
+ * Prevents account bans from mechanical operation patterns
+ */
+class OperationTimer {
+  private lastOperation: number = 0;
+  private operationLog: Array<{ name: string; timestamp: number }> = [];
+
+  async enforceDelay(operationName: string, minDelayMs: number): Promise<void> {
+    const now = Date.now();
+    const elapsed = now - this.lastOperation;
+
+    if (this.lastOperation > 0 && elapsed < minDelayMs) {
+      const needed = minDelayMs - elapsed;
+      console.log(`⏱️ Safety delay: ${operationName} needs ${needed}ms more (${elapsed}ms elapsed)`);
+      await humanDelay(needed, needed + 500);
+    }
+
+    this.lastOperation = Date.now();
+    this.operationLog.push({ name: operationName, timestamp: this.lastOperation });
+
+    // Keep only last 10 operations
+    if (this.operationLog.length > 10) {
+      this.operationLog.shift();
+    }
+  }
+
+  getOperationLog(): Array<{ name: string; timestamp: number }> {
+    return [...this.operationLog];
+  }
 }

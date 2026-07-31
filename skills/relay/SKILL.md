@@ -34,7 +34,7 @@ Apply these rules throughout the run:
 6. Never ask a worker to publish, pay, delete, change account security, or perform another irreversible external action.
 7. Verify material claims with current evidence. Do not present successful browser submission as successful task completion.
 8. Report which providers actually returned usable work. Do not claim a provider was used when its response was unavailable or incomplete.
-9. Operate at a human-readable pace. Wait for observable page state, add brief pauses between visible actions, and avoid bursty clicking, typing, or polling. Never use timing to evade detection, rate limits, CAPTCHAs, or platform controls.
+9. **⚠️ CRITICAL: Operate at human-readable pace.** Wait for observable page state, add pauses between actions (≥500ms), and avoid bursty clicking, typing, or polling. Navigation requires 1.5-2.5s wait. Response polling must be ≥5s intervals. This is an ACCOUNT SAFETY requirement, not optional. See [HUMAN_PACING.md](../../HUMAN_PACING.md) for mandatory timing standards. Never use timing to evade detection, rate limits, CAPTCHAs, or platform controls, but always use timing to protect account safety.
 
 ## Decide Whether To Delegate
 

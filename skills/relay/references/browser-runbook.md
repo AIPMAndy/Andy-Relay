@@ -1,6 +1,19 @@
 # Browser Dispatch Runbook
 
-Use this runbook together with the browser-control Skill available in the current Codex environment. The browser Skill owns its setup and tool-specific commands; CodexPM owns task routing and verification.
+Use this runbook together with the browser-control Skill available in the current Codex environment. The browser Skill owns its setup and tool-specific commands; Relay owns task routing and verification.
+
+## ⚠️ CRITICAL: Human Pacing Requirements
+
+**This is the #1 account safety rule. Violating timing standards WILL result in account bans.**
+
+Before reading anything else, understand:
+- All operations must have ≥500ms delay between them
+- Navigation requires 1.5-2.5 second wait for page stability
+- Long text must be chunked with 300-800ms delays
+- Response polling must use ≥5 second intervals
+- Never use fixed timing patterns (add randomization)
+
+**See [../../../HUMAN_PACING.md](../../../HUMAN_PACING.md) for complete timing standards. This is mandatory, not optional.**
 
 ## Choose A Browser Surface
 
