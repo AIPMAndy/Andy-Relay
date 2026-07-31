@@ -51,7 +51,7 @@ cd Relay
 
 ```bash
 # For TypeScript components (Claude Code)
-cd skills/relay/scripts
+cd skills/andy-relay/scripts
 bun install  # or npm install
 
 # For Python components (Codex)

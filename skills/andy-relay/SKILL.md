@@ -1,9 +1,9 @@
 ---
-name: relay
+name: andy-relay
 description: Coordinate browser-based AI services as supervised workers while the AI PM (Codex or Claude) remains the accountable project manager. Automatically detects environment and routes to appropriate browser control (CDP for Codex, WebBridge for Claude Code). Use when delegating work to Gemini, Grok, Doubao, ChatGPT, Google Search, or other web AIs; comparing multiple AI answers; routing research, drafting, analysis, or review to the best available logged-in service; or reducing primary-model token use without giving up verification. Do not use for simple self-contained work when delegation overhead exceeds the likely benefit.
 ---
 
-# Relay
+# Andy-Relay
 
 Keep ownership of the goal, task decomposition, evidence standard, and final answer. Delegate bounded work to one to three browser-based AI services, recover their outputs, verify them, and synthesize the result.
 

@@ -15,13 +15,13 @@ The installer automatically detects your environment (Codex or Claude Code) and 
 ### Codex
 
 ```text
-用 $relay 调度 Gemini 分析这份报告，并由你核验结果
+用 $andy-relay 调度 Gemini 分析这份报告，并由你核验结果
 ```
 
 ### Claude Code
 
 ```text
-用 /relay 调度 ChatGPT 写初稿，豆包做中文润色，你负责最终审核
+用 /andy-relay 调度 ChatGPT 写初稿，豆包做中文润色，你负责最终审核
 ```
 
 **Prerequisites for Claude Code:**
@@ -32,25 +32,25 @@ The installer automatically detects your environment (Codex or Claude Code) and 
 
 ### Research with verification
 ```text
-/relay 让 Google Search 找到三个权威来源关于量子计算的最新进展，
+/andy-relay 让 Google Search 找到三个权威来源关于量子计算的最新进展，
 Gemini 总结核心发现，你打开原始链接核验关键数据并给我最终报告
 ```
 
 ### Multi-model review
 ```text
-/relay 把这段代码交给 ChatGPT 做性能分析，Gemini 做安全审查，
+/andy-relay 把这段代码交给 ChatGPT 做性能分析，Gemini 做安全审查，
 你综合两个视角给我改进建议
 ```
 
 ### Chinese content workflow
 ```text
-/relay 让豆包把这篇英文文章改写成适合中国用户的口语化版本，
+/andy-relay 让豆包把这篇英文文章改写成适合中国用户的口语化版本，
 你检查事实准确性并修正任何误导性表达
 ```
 
 ### Long document processing
 ```text
-/relay 把这份 PDF（已上传到 Gemini）交给它提取关键结论和数据表格，
+/andy-relay 把这份 PDF（已上传到 Gemini）交给它提取关键结论和数据表格，
 你核对引用页码并补充遗漏的重要信息
 ```
 
@@ -144,14 +144,14 @@ Relay will pause and ask you to:
 
 **Python (Codex)**:
 ```bash
-python3 skills/relay/scripts/task_packet.py \
+python3 skills/andy-relay/scripts/task_packet.py \
   --provider gemini \
   --input task.json
 ```
 
 **TypeScript (Claude Code)**:
 ```bash
-node skills/relay/scripts/task_packet.ts \
+node skills/andy-relay/scripts/task_packet.ts \
   --provider chatgpt \
   --input task.json
 ```
@@ -180,13 +180,13 @@ Relay chooses providers based on:
 
 Override by explicitly naming the provider:
 ```text
-/relay 用 Gemini 完成这个任务（即使 ChatGPT 更合适）
+/andy-relay 用 Gemini 完成这个任务（即使 ChatGPT 更合适）
 ```
 
 ## Architecture
 
 ```
-skills/relay/
+skills/andy-relay/
 ├── SKILL.md                    # Main skill definition
 ├── references/
 │   ├── browser-runbook.md      # Browser control guidelines

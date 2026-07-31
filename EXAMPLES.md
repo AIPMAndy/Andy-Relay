@@ -4,7 +4,7 @@
 
 ## ✅ 已完成设置
 
-- ✓ Relay 已安装到 `~/.claude/skills/relay`
+- ✓ Andy-Relay 已安装到 `~/.claude/skills/andy-relay`
 - ✓ Kimi WebBridge 正在运行 (v1.11.3)
 - ✓ 环境检测：Claude Code + WebBridge
 - ✓ GitHub 仓库：https://github.com/AIPMAndy/Relay
@@ -13,7 +13,7 @@
 
 **用户请求**：
 ```
-用 /relay 调度 Google Search 查找"Claude Opus 4.8 发布时间和主要特性"，
+用 /andy-relay 调度 Google Search 查找"Claude Opus 4.8 发布时间和主要特性"，
 让 Gemini 总结关键信息，你打开官方来源核验并给我最终报告
 ```
 
@@ -100,7 +100,7 @@
 
 **用户请求**：
 ```
-用 /relay 把这篇英文技术文章改写成适合中国开发者阅读的版本：
+用 /andy-relay 把这篇英文技术文章改写成适合中国开发者阅读的版本：
 <文章内容>
 ```
 
@@ -148,7 +148,7 @@
 
 **用户请求**：
 ```
-用 /relay 让两个 AI 独立审查这段代码的安全性和性能，你综合结论
+用 /andy-relay 让两个 AI 独立审查这段代码的安全性和性能，你综合结论
 ```
 
 **Relay 执行流程**：
@@ -225,7 +225,7 @@ function detectEnvironment(): Environment {
   "browser_control": "mcp__webbridge__*",
   "webbridge_version": "v1.11.3",
   "extension_connected": true,
-  "skill_path": "/Users/andy/.claude/skills/relay"
+  "skill_path": "/Users/andy/.claude/skills/andy-relay"
 }
 ```
 
@@ -235,7 +235,7 @@ function detectEnvironment(): Environment {
 
 **Python (Codex)**:
 ```bash
-cd /Users/andy/.claude/skills/relay
+cd /Users/andy/.claude/skills/andy-relay
 python3 scripts/task_packet.py --self-test
 # ✓ task_packet self-test passed
 
@@ -252,7 +252,7 @@ EOF
 
 **TypeScript (Claude Code)**:
 ```bash
-cd /Users/andy/.claude/skills/relay
+cd /Users/andy/.claude/skills/andy-relay
 node scripts/task_packet.ts --self-test
 # ✓ task_packet self-test passed
 
@@ -264,7 +264,7 @@ echo '{"objective":"测试","deliverable":"结果","acceptance":"完成"}' | \
 
 ## 下一步
 
-1. **实际测试**：在 Claude Code 中运行 `/relay` 调度一个简单任务
+1. **实际测试**：在 Claude Code 中运行 `/andy-relay` 调度一个简单任务
 2. **提供商配置**：确保已登录 Gemini/ChatGPT/Doubao
 3. **反馈循环**：根据实际使用优化选择器和等待逻辑
 

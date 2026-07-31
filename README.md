@@ -1,8 +1,8 @@
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/AIPMAndy/Relay/main/.github/relay-logo.svg" alt="Relay Logo" width="120" height="120">
+<img src="https://raw.githubusercontent.com/AIPMAndy/Relay/main/.github/andy-relay-logo.svg" alt="Andy-Relay Logo" width="120" height="120">
 
-# Relay
+# Andy-Relay
 
 ### 🚀 Stop copying prompts. Start orchestrating AI.
 
@@ -25,7 +25,7 @@
 
 你花了 $300 买 AI 课程，学到的是"用这个神奇 prompt"。
 
-**Relay 教你的是**：让 Claude/Codex 当项目经理，调度 Gemini 读长文、ChatGPT 写代码、Grok 查实时信息、豆包润色中文——然后自己核验结果、解决冲突、交付答案。
+**Andy-Relay 教你的是**：让 Claude/Codex 当项目经理，调度 Gemini 读长文、ChatGPT 写代码、Grok 查实时信息、豆包润色中文——然后自己核验结果、解决冲突、交付答案。
 
 就像真实团队：**经理不写所有代码，但对最终质量负责。**
 
@@ -39,9 +39,9 @@
 AI：[耗尽上下文] [数据可能过时] [单一视角]
 ```
 
-**Relay 方式**：
+**Andy-Relay 方式**：
 ```
-你：用 /relay 让 Gemini 读这份报告（它有 200K 上下文），
+你：用 /andy-relay 让 Gemini 读这份报告（它有 200K 上下文），
     Google Search 核对里面的数据，你综合后给我要点
 
 AI PM (Claude)：
@@ -65,7 +65,7 @@ AI PM (Claude)：
 <tr>
 <td width="50%">
 
-#### ❌ 不需要 Relay
+#### ❌ 不需要 Andy-Relay
 - 一句话问答
 - 简单代码补全
 - 本地文件操作
@@ -74,7 +74,7 @@ AI PM (Claude)：
 </td>
 <td width="50%">
 
-#### ✅ 完美适配 Relay
+#### ✅ 完美适配 Andy-Relay
 - 📄 长文档分析（交给 Gemini）
 - 🔍 事实核查（Google Search + 交叉验证）
 - 🇨🇳 中文内容（豆包润色 + Claude 审核）
@@ -104,13 +104,13 @@ cd Relay
 
 **Codex**:
 ```
-用 $relay 调度 Gemini 总结这篇文章的核心观点，
+用 $andy-relay 调度 Gemini 总结这篇文章的核心观点，
 Google Search 验证里面的统计数据，你给我最终报告
 ```
 
 **Claude Code**:
 ```
-用 /relay 让豆包把这段英文改写成适合中国用户的版本，
+用 /andy-relay 让豆包把这段英文改写成适合中国用户的版本，
 你检查技术准确性后给我定稿
 ```
 
@@ -143,11 +143,11 @@ graph LR
 **任务**：分析竞品定价策略
 
 ```
-/relay 让 Google Search 找到三家竞品的官方定价页面，
+/andy-relay 让 Google Search 找到三家竞品的官方定价页面，
 Gemini 提取价格表和特性对比，你验证数据并给我分析报告
 ```
 
-**Relay 执行**：
+**Andy-Relay 执行**：
 1. Google Search → 找到官方页面
 2. Gemini → 提取结构化数据
 3. Claude 核验 → 打开原始链接确认价格
@@ -162,11 +162,11 @@ Gemini 提取价格表和特性对比，你验证数据并给我分析报告
 **任务**：英文技术文章改写为中文
 
 ```
-/relay 把这篇 Kubernetes 文章交给豆包改写成中国开发者习惯的表达，
+/andy-relay 把这篇 Kubernetes 文章交给豆包改写成中国开发者习惯的表达，
 你检查技术术语准确性并补充本地化案例
 ```
 
-**Relay 执行**：
+**Andy-Relay 执行**：
 1. 豆包 → 中文改写 + 文化本地化
 2. Claude 核验 → 检查技术概念是否走样
 3. Claude 补充 → 添加阿里云/腾讯云案例
@@ -181,11 +181,11 @@ Gemini 提取价格表和特性对比，你验证数据并给我分析报告
 **任务**：安全 + 性能双重审查
 
 ```
-/relay 让 ChatGPT 做安全审查，Gemini 做性能分析，
+/andy-relay 让 ChatGPT 做安全审查，Gemini 做性能分析，
 你解决冲突建议并给我优先级排序的改进清单
 ```
 
-**Relay 执行**：
+**Andy-Relay 执行**：
 1. ChatGPT → 识别 SQL 注入、XSS 风险
 2. Gemini → 发现 O(n²) 算法、内存泄漏
 3. Claude 综合 → 解决"安全修复 vs 性能优化"的冲突
@@ -214,7 +214,7 @@ Gemini 提取价格表和特性对比，你验证数据并给我分析报告
 
 #### 1. 人类节奏操作（防封号）
 
-Relay **强制执行**人类操作节奏，不是建议，是硬性规则：
+Andy-Relay **强制执行**人类操作节奏，不是建议，是硬性规则：
 
 ```typescript
 ✅ 所有操作间隔 ≥ 500ms
@@ -278,8 +278,8 @@ if (claude_code) {
 - 📘 [快速开始](QUICKSTART.md) - 5 分钟入门
 - 📕 [使用案例](EXAMPLES.md) - 10+ 真实场景
 - 📗 [人类节奏规范](HUMAN_PACING.md) - ⚠️ 账号安全必读
-- 📙 [浏览器操作手册](skills/relay/references/browser-runbook.md)
-- 📓 [Provider 选择矩阵](skills/relay/references/provider-routing.md)
+- 📙 [浏览器操作手册](skills/andy-relay/references/browser-runbook.md)
+- 📓 [Provider 选择矩阵](skills/andy-relay/references/provider-routing.md)
 
 ---
 
@@ -343,7 +343,7 @@ if (claude_code) {
 
 You paid $300 for an AI course. What did you learn? "Use this magic prompt."
 
-**Relay teaches you**: Make Claude/Codex the project manager. It delegates reading to Gemini, coding to ChatGPT, real-time search to Grok, Chinese polishing to Doubao — then verifies results, resolves conflicts, and delivers the final answer.
+**Andy-Relay teaches you**: Make Claude/Codex the project manager. It delegates reading to Gemini, coding to ChatGPT, real-time search to Grok, Chinese polishing to Doubao — then verifies results, resolves conflicts, and delivers the final answer.
 
 Like a real team: **The manager doesn't write all the code, but owns the final quality.**
 
@@ -357,9 +357,9 @@ You: Analyze this 50-page PDF report
 AI: [context overflow] [possibly outdated data] [single perspective]
 ```
 
-**Relay Way**:
+**Andy-Relay Way**:
 ```
-You: Use /relay to have Gemini read this report (200K context),
+You: Use /andy-relay to have Gemini read this report (200K context),
      Google Search verify the data, then synthesize the key points
 
 AI PM (Claude):
@@ -383,7 +383,7 @@ AI PM (Claude):
 <tr>
 <td width="50%">
 
-#### ❌ Don't Need Relay
+#### ❌ Don't Need Andy-Relay
 - One-sentence Q&A
 - Simple code completion
 - Local file operations
@@ -392,7 +392,7 @@ AI PM (Claude):
 </td>
 <td width="50%">
 
-#### ✅ Perfect for Relay
+#### ✅ Perfect for Andy-Relay
 - 📄 Long document analysis (→ Gemini)
 - 🔍 Fact-checking (Google + cross-verification)
 - 🇨🇳 Chinese content (Doubao + Claude review)
@@ -422,13 +422,13 @@ The installer auto-detects your environment (Codex or Claude Code) and sets ever
 
 **Codex**:
 ```
-Use $relay to have Gemini summarize this article's core arguments,
+Use $andy-relay to have Gemini summarize this article's core arguments,
 Google Search verify the statistics, then give me the final report
 ```
 
 **Claude Code**:
 ```
-Use /relay to have Doubao rewrite this English text for Chinese users,
+Use /andy-relay to have Doubao rewrite this English text for Chinese users,
 then you check technical accuracy and give me the final version
 ```
 
@@ -438,19 +438,19 @@ then you check technical accuracy and give me the final version
 
 **Research + Fact-Checking**:
 ```
-/relay: Google Search finds 3 competitors' pricing pages,
+/andy-relay: Google Search finds 3 competitors' pricing pages,
 Gemini extracts pricing tables, you verify and analyze
 ```
 
 **Chinese Localization**:
 ```
-/relay: Doubao rewrites this Kubernetes article for Chinese developers,
+/andy-relay: Doubao rewrites this Kubernetes article for Chinese developers,
 you ensure technical terms are accurate
 ```
 
 **Multi-Model Code Review**:
 ```
-/relay: ChatGPT does security audit, Gemini does performance analysis,
+/andy-relay: ChatGPT does security audit, Gemini does performance analysis,
 you resolve conflicts and prioritize fixes
 ```
 
@@ -462,7 +462,7 @@ See [EXAMPLES.md](EXAMPLES.md) for 10+ detailed use cases.
 
 #### 1. Human-Paced Operations (Anti-Ban)
 
-Relay **enforces** human timing patterns. Not a suggestion — a hard requirement:
+Andy-Relay **enforces** human timing patterns. Not a suggestion — a hard requirement:
 
 ```typescript
 ✅ All operations ≥ 500ms apart
@@ -510,8 +510,8 @@ See [HUMAN_PACING.md](HUMAN_PACING.md) (mandatory reading)
 - 📘 [Quick Start](QUICKSTART.md)
 - 📕 [Examples](EXAMPLES.md)
 - 📗 [Human Pacing](HUMAN_PACING.md) - ⚠️ Account safety
-- 📙 [Browser Runbook](skills/relay/references/browser-runbook.md)
-- 📓 [Provider Routing](skills/relay/references/provider-routing.md)
+- 📙 [Browser Runbook](skills/andy-relay/references/browser-runbook.md)
+- 📓 [Provider Routing](skills/andy-relay/references/provider-routing.md)
 
 ---
 
@@ -539,7 +539,7 @@ Before submitting PR:
 
 ---
 
-### ⭐ If Relay Helped You...
+### ⭐ If Andy-Relay Helped You...
 
 Please give it a star! It matters a lot for open-source projects.
 
@@ -549,7 +549,7 @@ Please give it a star! It matters a lot for open-source projects.
 
 <div align="center">
 
-**[🔝 Back to Top](#relay)**
+**[🔝 Back to Top](#andy-relay)**
 
 Made with ❤️ by the AI orchestration community
 
