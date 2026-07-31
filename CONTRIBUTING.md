@@ -1,6 +1,6 @@
-# Contributing to Relay 🤝
+# Contributing to Andy-Relay 🤝
 
-First off, thank you for considering contributing to Relay! It's people like you that make open source thrive.
+First off, thank you for considering contributing to Andy-Relay! It's people like you that make open source thrive.
 
 ## 🌟 Ways to Contribute
 
@@ -166,10 +166,10 @@ const browser = await BrowserAdapter.create();
 1. **Test both environments** (if applicable)
    ```bash
    # Test in Claude Code
-   /relay <your-test-task>
+   /andy-relay <your-test-task>
    
    # Test in Codex
-   $relay <your-test-task>
+   $andy-relay <your-test-task>
    ```
 
 2. **Verify human pacing**
@@ -246,7 +246,7 @@ Step-by-step guide:
 
 ### 1. Add Provider Config
 
-Edit `skills/relay/scripts/providers.ts`:
+Edit `skills/andy-relay/scripts/providers.ts`:
 
 ```typescript
 export const PROVIDERS: Record<string, ProviderConfig> = {
@@ -292,7 +292,7 @@ Add to [EXAMPLES.md](EXAMPLES.md):
 **Task**: Specific use case
 
 \`\`\`
-/relay let YourProvider <describe task>
+/andy-relay let YourProvider <describe task>
 \`\`\`
 
 **Why YourProvider**: Explain its unique strength
@@ -308,10 +308,10 @@ Add to [EXAMPLES.md](EXAMPLES.md):
 
 ```bash
 # Test basic operation
-/relay let YourProvider summarize this article: <URL>
+/andy-relay let YourProvider summarize this article: <URL>
 
 # Test error handling
-/relay let YourProvider <task that might fail>
+/andy-relay let YourProvider <task that might fail>
 
 # Test human pacing
 # Watch the automation - should look natural
@@ -355,7 +355,7 @@ By contributing, you agree that your contributions will be licensed under the [M
 
 ## 🙏 Thank You!
 
-Every contribution, no matter how small, helps make Relay better for everyone.
+Every contribution, no matter how small, helps make Andy-Relay better for everyone.
 
 **Questions?** Don't hesitate to ask in [Discussions](https://github.com/AIPMAndy/Relay/discussions).
 
@@ -363,7 +363,7 @@ Every contribution, no matter how small, helps make Relay better for everyone.
 
 <div align="center">
 
-**[🔝 Back to Top](#contributing-to-relay-)**
+**[🔝 Back to Top](#contributing-to-andy-relay-)**
 
 Made with ❤️ by contributors like you
 

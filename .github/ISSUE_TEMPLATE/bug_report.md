@@ -1,6 +1,6 @@
 ---
 name: Bug Report
-about: Report a bug to help us improve Relay
+about: Report a bug to help us improve Andy-Relay
 title: '[BUG] '
 labels: bug
 assignees: ''

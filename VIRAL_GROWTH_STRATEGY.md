@@ -1,4 +1,4 @@
-# Relay GitHub 病毒式增长策略
+# Andy-Relay GitHub 病毒式增长策略
 
 ## 🎯 已完成优化
 
@@ -18,7 +18,7 @@ Stop copying prompts. Start orchestrating AI.
 Your AI doesn't need to do everything. It needs to manage everything.
 ```
 
-**30 秒演示**：传统方式 vs Relay 方式直接对比
+**30 秒演示**：传统方式 vs Andy-Relay 方式直接对比
 
 ### 3. 可发现性 ✅
 **13 个战略性 Topics**：
@@ -60,7 +60,7 @@ Your AI doesn't need to do everything. It needs to manage everything.
 #### 1. 内容营销
 ```bash
 # Twitter 发布策略
-- 发布 Relay 介绍推文 + Logo
+- 发布 Andy-Relay 介绍推文 + Logo
 - 演示 GIF (30 秒实际操作)
 - 每个 Provider 一个案例推文
 - 转发到相关 AI 社区
@@ -84,7 +84,7 @@ Your AI doesn't need to do everything. It needs to manage everything.
 - [ ] 创建 `/examples` 目录放真实任务包
 - [ ] 录制 5 分钟 YouTube 教程
 - [ ] 写博客文章详解架构设计
-- [ ] 制作对比表：Relay vs LangChain vs AutoGPT
+- [ ] 制作对比表：Andy-Relay vs LangChain vs AutoGPT
 
 #### 5. 技术 SEO
 - [ ] 添加 Open Graph 元标签（社交分享预览）
@@ -134,14 +134,14 @@ Your AI doesn't need to do everything. It needs to manage everything.
 ## 🎨 待创建素材清单
 
 ### 视觉素材（优先级高）
-- [ ] **30 秒 Demo GIF**: Relay 实际操作
+- [ ] **30 秒 Demo GIF**: Andy-Relay 实际操作
 - [ ] **架构图 PNG**: 比 Mermaid 更精美的版本
 - [ ] **Provider 图标**: Gemini/ChatGPT/Grok/Doubao logos
-- [ ] **对比图**: Traditional prompt vs Relay orchestration
+- [ ] **对比图**: Traditional prompt vs Andy-Relay orchestration
 - [ ] **成功案例截图**: 真实任务前后对比
 
 ### 文案素材
-- [ ] **Twitter Thread**: 10 推拆解 Relay 核心价值
+- [ ] **Twitter Thread**: 10 推拆解 Andy-Relay 核心价值
 - [ ] **Product Hunt 描述**: 280 字精华
 - [ ] **HN Show HN 帖子**: 技术细节 + 设计决策
 - [ ] **中文版推广文案**: 适合即刻/知乎的口吻
@@ -175,15 +175,15 @@ Your AI doesn't need to do everything. It needs to manage everything.
 ```bash
 # 脚本：
 1. 打开 Claude Code/Codex
-2. 输入：/relay 让 Gemini 总结这篇 50 页论文，Google 验证数据
+2. 输入：/andy-relay 让 Gemini 总结这篇 50 页论文，Google 验证数据
 3. 屏幕录制：AI PM 调度 → Workers 执行 → 结果综合
-4. 加字幕："传统：上下文爆炸 → Relay：协同完成"
+4. 加字幕："传统：上下文爆炸 → Andy-Relay：协同完成"
 5. 转成 GIF 放 README 顶部
 ```
 
 ### 2. 发首条 Twitter
 ```
-🚀 刚开源了 Relay：让你的 AI 当项目经理
+🚀 刚开源了 Andy-Relay：让你的 AI 当项目经理
 
 不要让 Claude 做所有事 → 让它管理所有事：
 - 长文档交给 Gemini (200K 上下文)
@@ -207,7 +207,7 @@ Star 即可收藏 ⭐
 - awesome-prompt-engineering
 
 ### 4. 发到中文社区
-- **即刻**: 创建 Relay 话题，发首条动态
+- **即刻**: 创建 Andy-Relay 话题，发首条动态
 - **知乎**: 写"我开源了一个 AI 编排工具"文章
 - **V2EX**: /go/create 板块发布
 

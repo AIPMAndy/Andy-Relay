@@ -1,4 +1,4 @@
-# Relay Quick Start
+# Andy-Relay Quick Start
 
 ## Installation
 
@@ -76,7 +76,7 @@ You → AI PM (Codex/Claude)
 
 ## Environment Detection
 
-Relay automatically detects:
+Andy-Relay automatically detects:
 
 1. **Tool availability**: Checks for `mcp__webbridge__*` tools (Claude Code) or Codex browser skills
 2. **Environment variables**: `AI_ENVIRONMENT`, `CODEX_HOME`, `CLAUDE_CODE_SESSION`
@@ -96,13 +96,13 @@ No manual configuration needed.
 
 ## Safety Boundaries
 
-✅ **Relay will:**
+✅ **Andy-Andy-Relay will:**
 - Route tasks to appropriate web AIs
 - Extract and return results
 - Wait for generation completion
 - Preserve partial outputs on failure
 
-❌ **Relay will NOT:**
+❌ **Andy-Relay will NOT:**
 - Send passwords, API keys, or credentials
 - Perform irreversible actions (publish, pay, delete)
 - Bypass login, CAPTCHA, or 2FA
@@ -127,13 +127,13 @@ Check that you have one of:
 - CDP browser skill installed
 
 ### Worker returns incomplete output
-Relay will:
+Andy-Relay will:
 1. Capture partial output
 2. Ask worker to continue from last complete section
 3. Report limitation to AI PM if retry fails
 
 ### Login required
-Relay will pause and ask you to:
+Andy-Relay will pause and ask you to:
 1. Open the browser
 2. Sign in to the required service
 3. Confirm when ready
@@ -171,7 +171,7 @@ Task JSON schema:
 
 ### Provider selection logic
 
-Relay chooses providers based on:
+Andy-Relay chooses providers based on:
 1. **Task language**: Chinese text → Doubao
 2. **Task type**: "search" → Google Search, "analyze" → Gemini
 3. **Context length**: Long docs → Gemini

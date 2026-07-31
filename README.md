@@ -329,7 +329,7 @@ if (claude_code) {
 
 ### ⭐ Star History
 
-如果 Relay 帮到了你，请给个 Star！这对开源项目很重要。
+如果 Andy-Relay 帮到了你，请给个 Star！这对开源项目很重要。
 
 [![Star History Chart](https://api.star-history.com/svg?repos=AIPMAndy/Relay&type=Date)](https://star-history.com/#AIPMAndy/Relay&Date)
 
@@ -377,7 +377,7 @@ AI PM (Claude):
 
 ---
 
-### 🎯 When to Use Relay?
+### 🎯 When to Use Andy-Relay?
 
 <table>
 <tr>
