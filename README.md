@@ -18,6 +18,7 @@ CodexPM 是一个开源 Codex Skill。它把已登录的网页版 AI 当作受�
 - 把搜索、长文初读、初稿和独立审查交给更合适的网页 AI
 - 只发送完成子任务所需的最小上下文，减少主模型上下文消耗
 - 默认单 Worker，必要时才做双模型交叉验证，最多三个
+- 使用基于页面状态的等待和适度间歇，让浏览器操作稳定、清晰、不连点
 - 保留密码、验证码、支付、发布、删除和账号安全的人工边界
 
 ## 适合什么任务
@@ -45,6 +46,8 @@ cd CodexPM
 ```
 
 CodexPM 使用当前 Codex 环境里可用的 in-app Browser、Chrome/Edge 扩展或已安装的 CDP 浏览器 Skill。它不会替你创建付费订阅，也不会绕过登录、验证码或安全验证。
+
+浏览器操作默认采用“人类节奏”：导航后等页面稳定，输入后确认内容，再提交；生成期间降低轮询频率，不连续点击。这里的间歇只用于稳定性和体验，不用于伪装真人、规避限流、验证码、风控或平台检测。
 
 ## 工作方式
 
@@ -76,7 +79,7 @@ python3 skills/codex-pm/scripts/task_packet.py --self-test
 
 CodexPM is an open-source Codex Skill that treats logged-in web AIs as supervised workers. Codex remains the accountable project manager: it defines the deliverable, routes bounded tasks, controls the available browser surface, collects evidence, resolves disagreements, and verifies the final result.
 
-It supports capability-based routing to Gemini, Grok, Doubao, ChatGPT, Google Search, and other web services without hard-coding volatile page selectors. One worker is the default; additional workers are used only when independent work or cross-checking materially improves the outcome.
+It supports capability-based routing to Gemini, Grok, Doubao, ChatGPT, Google Search, and other web services without hard-coding volatile page selectors. One worker is the default; additional workers are used only when independent work or cross-checking materially improves the outcome. Browser actions use state-aware, human-readable pacing for stability, never impersonation or anti-detection behavior.
 
 ## License
 

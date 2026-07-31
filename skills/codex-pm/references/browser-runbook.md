@@ -26,6 +26,20 @@ Before acting, load and follow the selected surface's browser Skill or complete 
 
 Prefer semantic inspection and current interactive elements over hard-coded selectors. Treat UI labels and DOM structure as volatile.
 
+## Human-Paced Interaction
+
+Operate with deliberate, state-aware pacing so the page can settle and each action remains understandable. This is a reliability and experience rule, not human impersonation or an anti-detection technique.
+
+1. Prefer an observable condition over a blind delay: page load, a unique input becoming ready, submitted text appearing, a stop button appearing, or the final response stabilizing.
+2. After navigation or a major UI transition, wait for the relevant state and then allow a brief settling pause, typically about 0.5 to 1.5 seconds.
+3. Before typing, confirm the target is unique and ready. Insert the complete packet with the browser surface's supported typing or fill action; do not create dozens of per-character tool calls.
+4. After inserting text, pause briefly and verify the expected content is present before submitting. Do not paste and click submit in the same burst.
+5. After submission, wait for a visible generation state before checking output. Poll no faster than every 2 to 5 seconds; increase the interval to roughly 5 to 10 seconds for long generations.
+6. Between separate provider dispatches, allow the previous action to stabilize before switching tabs. A short 1 to 3 second pause is usually sufficient when no stronger state signal exists.
+7. Stop immediately when the user takes control, a confirmation boundary appears, or the page reports throttling. Resume only from the new visible state.
+
+Do not add random mouse movement, intentional mistakes, fingerprint changes, timing jitter intended to look human, or delays intended to bypass platform enforcement. Do not sleep when the required state is already observable and stable; unnecessary waiting makes the experience less smooth.
+
 ## Authentication And Safety Handoffs
 
 Stop and hand control to the user for:
@@ -46,7 +60,7 @@ Ask the user to sign in on the selected browser surface and tell you when it is 
 
 ### Response stalls
 
-Wait once more, then capture any stable partial output. Retry once in a fresh conversation only when duplicate work has no external side effect.
+Increase the polling interval and wait once more, then capture any stable partial output. Retry once in a fresh conversation only when duplicate work has no external side effect.
 
 ### UI changed
 

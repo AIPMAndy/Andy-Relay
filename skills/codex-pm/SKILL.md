@@ -19,6 +19,7 @@ Apply these rules throughout the run:
 6. Never ask a worker to publish, pay, delete, change account security, or perform another irreversible external action.
 7. Verify material claims with current evidence. Do not present successful browser submission as successful task completion.
 8. Report which providers actually returned usable work. Do not claim a provider was used when its response was unavailable or incomplete.
+9. Operate at a human-readable pace. Wait for observable page state, add brief pauses between visible actions, and avoid bursty clicking, typing, or polling. Never use timing to evade detection, rate limits, CAPTCHAs, or platform controls.
 
 ## Decide Whether To Delegate
 
@@ -77,7 +78,7 @@ Include source text or uploadable files the worker can actually access. Do not p
 
 Read [browser-runbook.md](references/browser-runbook.md) before the first browser dispatch in a run. Follow the selected browser surface's own Skill or documentation exactly.
 
-Use a fresh conversation for unrelated work. Confirm the intended provider page and signed-in state before submitting. Submit once, wait for completion, then extract the full response and source links. Preserve partial output when a run fails.
+Use a fresh conversation for unrelated work. Confirm the intended provider page and signed-in state before submitting. Follow the human-paced interaction rules in the runbook: submit once, wait for completion without aggressive polling, then extract the full response and source links. Preserve partial output when a run fails.
 
 ### 5. Verify And Synthesize
 
